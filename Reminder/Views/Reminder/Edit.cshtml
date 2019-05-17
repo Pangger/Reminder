@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/Reminder/Edit" method="post" class="input-form">
+    <input class="hidden" type="text" name="Id" value="@ViewBag.Id" />
+    <p>
+        <label for="name">Text</label>
+        <input id="name" class="input-field" type="text" placeholder="Input note text" name="Text" value="@ViewBag.Text" />
+    </p>
+    <p>
+        <label for="date">Date</label>
+        <input id="date" class="input-field" type="text" name="Date" placeholder="Input Date" value="@ViewBag.Date" />
+    </p>
+    <p><input class="btn btn-success" type="submit" value="Edit" /></p>
+</form>

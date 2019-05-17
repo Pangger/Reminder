@@ -1,0 +1,26 @@
+﻿@using Reminder.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Notes</h2>
+<p> <a href="/Reminder/Create" class="btn btn-success">Create note</a> </p>
+
+<div class="container">
+        @foreach (Note note in ViewBag.Notes)
+        {
+        <div class="note row">
+            <div class="col-xs-4 note-text">
+                @(note.Text)
+            </div>
+            <div class="col-xs-4 note-date">
+                @(note.Date)
+            </div>
+            <div class="col-xs-4 note-buttons">
+                <a href="/Reminder/Edit?id=@note.Id" class="btn btn-info">Edit</a>
+                <a href="/Reminder/Delete?id=@note.Id" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+        }
+
+</div>

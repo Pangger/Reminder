@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form action="/Reminder/Create" method="post" class="input-form">
+    <p>
+        <label for="name">Text</label>
+        <input id="name" class="input-field" type="text" placeholder="Input note text" name="Text" value="" required/>
+    </p>
+    <p>
+        <label for="date">Date</label>
+        <input id="date" class="input-field" type="date" name="Date" placeholder="Input Date" value="" required/>
+    </p>    
+    <p><input class="btn btn-success" type="submit" value="Create" /></p>
+</form>
